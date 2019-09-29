@@ -18,28 +18,61 @@
     }
 
     // Regular
+    console.log('hello')
 
     // Interpolated
+    console.log('Hello I am a %s string!', '🚀')
 
     // Styled
+    console.log('%c I am some great text', 'font-size: 25px;')
 
     // warning!
+    console.warn('console.warn for the !')
 
     // Error :|
+    console.error('console.error for the !')
 
     // Info
+    console.info('This is some info')
 
     // Testing
+    const p = document.querySelector('p')
+    console.assert(p.classList.contains('ouch'), '<p> does not contain the class "ouch"')
 
     // clearing
+    console.clear()
 
     // Viewing DOM Elements
+    console.log(p)
+    console.dir(p)
+
+    console.clear()
 
     // Grouping together
+    dogs.forEach(dog => {
+    console.group(`${dog.name}`)
+    console.log(`This is ${dog.name}`)
+    console.log(`${dog.name} is ${dog.age} years old`)
+    console.log(`${dog.name} is ${dog.age * 7} dog years old`)
+    console.groupEnd(`${dog.name}`)
+    })
+
 
     // counting
+    console.count('Jordan')
+    console.count('Jordan')
+    console.count('Jordan')
+    console.count('Jordan')
+    console.count('Jordan')
+    console.count('Jordan')
+    console.count('Jordan')
 
     // timing
+    console.time('timer')
+    for (var i = 0; i < 100; i ++) {
+      console.log(i**i)
+    }
+    console.timeEnd('timer')
 
   </script>
 </body>
